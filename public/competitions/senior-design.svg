@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="sen-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f2faf7" />
+      <stop offset="100%" stop-color="#ddf4ec" />
+    </linearGradient>
+    <linearGradient id="sen-teal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4dc9a3" />
+      <stop offset="100%" stop-color="#2ca37e" />
+    </linearGradient>
+    <linearGradient id="sen-navy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#283350" />
+      <stop offset="100%" stop-color="#141a29" />
+    </linearGradient>
+    <linearGradient id="sen-amber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffb833" />
+      <stop offset="100%" stop-color="#ff9900" />
+    </linearGradient>
+    <filter id="sen-shadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="4" dy="4" stdDeviation="0" flood-color="#141a29" flood-opacity="1" />
+    </filter>
+  </defs>
+
+  <!-- Base Badge Card -->
+  <rect x="25" y="15" width="350" height="270" rx="16" fill="url(#sen-bg)" stroke="#141a29" stroke-width="4" filter="url(#sen-shadow)" />
+
+  <!-- PCB Circuit Board Trace Background -->
+  <g opacity="0.22" stroke="#141a29" stroke-width="2.5" fill="none">
+    <path d="M 45 60 L 100 60 L 135 95 L 135 145" />
+    <circle cx="45" cy="60" r="4" fill="#141a29" />
+    <circle cx="135" cy="145" r="4" fill="#141a29" />
+
+    <path d="M 355 60 L 300 60 L 265 95 L 265 145" />
+    <circle cx="355" cy="60" r="4" fill="#141a29" />
+    <circle cx="265" cy="145" r="4" fill="#141a29" />
+
+    <path d="M 45 220 L 110 220 L 145 185" />
+    <circle cx="45" cy="220" r="4" fill="#141a29" />
+    <circle cx="145" cy="185" r="4" fill="#141a29" />
+
+    <path d="M 355 220 L 290 220 L 255 185" />
+    <circle cx="355" cy="220" r="4" fill="#141a29" />
+    <circle cx="255" cy="185" r="4" fill="#141a29" />
+  </g>
+
+  <!-- Central Advanced Systems Core: High-Tech Microcontroller & Robotic Manipulator Arm -->
+  <g id="senior-embedded-robotics" transform="translate(200, 145)">
+    <!-- Radar Telemetry Targeting Ring -->
+    <circle cx="0" cy="0" r="76" fill="none" stroke="#39ae8a" stroke-width="2.5" stroke-dasharray="7 7" />
+    <circle cx="0" cy="0" r="102" fill="none" stroke="#ff9900" stroke-width="2" stroke-dasharray="4 8" opacity="0.7" />
+
+    <!-- Square Silicon Processor Die (Backing) -->
+    <rect x="-52" y="-52" width="104" height="104" rx="12" fill="#ffffff" stroke="#141a29" stroke-width="5" />
+    
+    <!-- Chip Golden/Teal Bus Pins Left & Right -->
+    <g stroke="#ff9900" stroke-width="3.5">
+      <line x1="-63" y1="-32" x2="-52" y2="-32" />
+      <line x1="-63" y1="-16" x2="-52" y2="-16" />
+      <line x1="-63" y1="0" x2="-52" y2="0" />
+      <line x1="-63" y1="16" x2="-52" y2="16" />
+      <line x1="-63" y1="32" x2="-52" y2="32" />
+
+      <line x1="52" y1="-32" x2="63" y2="-32" />
+      <line x1="52" y1="-16" x2="63" y2="-16" />
+      <line x1="52" y1="0" x2="63" y2="0" />
+      <line x1="52" y1="16" x2="63" y2="16" />
+      <line x1="52" y1="32" x2="63" y2="32" />
+      
+      <!-- Top/Bottom Pins -->
+      <line x1="-32" y1="-63" x2="-32" y2="-52" />
+      <line x1="-16" y1="-63" x2="-16" y2="-52" />
+      <line x1="0" y1="-63" x2="0" y2="-52" />
+      <line x1="16" y1="-63" x2="16" y2="-52" />
+      <line x1="32" y1="-63" x2="32" y2="-52" />
+
+      <line x1="-32" y1="52" x2="-32" y2="63" />
+      <line x1="-16" y1="52" x2="-16" y2="63" />
+      <line x1="0" y1="52" x2="0" y2="63" />
+      <line x1="16" y1="52" x2="16" y2="63" />
+      <line x1="32" y1="52" x2="32" y2="63" />
+    </g>
+
+    <!-- Inner Processor Core -->
+    <rect x="-38" y="-38" width="76" height="76" rx="8" fill="url(#sen-teal)" stroke="#141a29" stroke-width="4" />
+
+    <!-- Industrial Articulated Robotic Arm superimposed -->
+    <g transform="translate(0, 6)">
+      <!-- Heavy Joint Pivot Base -->
+      <circle cx="-20" cy="20" r="11" fill="#141a29" />
+      <circle cx="-20" cy="20" r="5" fill="#ffffff" />
+
+      <!-- Arm Segment 1 (Turret to Elbow) -->
+      <line x1="-20" y1="20" x2="8" y2="-10" stroke="#141a29" stroke-width="8" stroke-linecap="round" />
+      <line x1="-20" y1="20" x2="8" y2="-10" stroke="#ff9900" stroke-width="3.5" stroke-linecap="round" />
+
+      <!-- Elbow Joint Pivot -->
+      <circle cx="8" cy="-10" r="9" fill="#141a29" />
+      <circle cx="8" cy="-10" r="4" fill="#ff9900" />
+
+      <!-- Arm Segment 2 (Elbow to Wrist) -->
+      <line x1="8" y1="-10" x2="30" y2="-36" stroke="#141a29" stroke-width="7" stroke-linecap="round" />
+      <line x1="8" y1="-10" x2="30" y2="-36" stroke="#ffffff" stroke-width="3" stroke-linecap="round" />
+
+      <!-- Wrist Toolhead / Gripper with Crimson Laser Beam -->
+      <circle cx="30" cy="-36" r="6" fill="#e31837" stroke="#141a29" stroke-width="2.5" />
+      <!-- Gripper Prongs -->
+      <path d="M 28 -42 L 40 -50" stroke="#141a29" stroke-width="3.5" stroke-linecap="round" />
+      <path d="M 36 -32 L 48 -38" stroke="#141a29" stroke-width="3.5" stroke-linecap="round" />
+
+      <!-- Laser Beam Emission to target -->
+      <line x1="40" y1="-42" x2="76" y2="-56" stroke="#e31837" stroke-width="3" stroke-dasharray="3 3" stroke-linecap="round" />
+      <circle cx="76" cy="-56" r="4" fill="#e31837" />
+    </g>
+
+    <!-- Status Telemetry LEDs -->
+    <circle cx="-25" cy="-25" r="4.5" fill="#e31837" stroke="#141a29" stroke-width="2" />
+    <circle cx="-12" cy="-25" r="4.5" fill="#ff9900" stroke="#141a29" stroke-width="2" />
+    <circle cx="0" cy="-25" r="4.5" fill="#39ae8a" stroke="#141a29" stroke-width="2" />
+  </g>
+</svg>

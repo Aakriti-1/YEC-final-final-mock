@@ -1,0 +1,8 @@
+{
+  "name": "Remix Remix YEC — Lassonde Engineering Society",
+  "description": "Official website for the York Engineering Competition (YEC) hosted by the Lassonde Engineering Society at York University.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

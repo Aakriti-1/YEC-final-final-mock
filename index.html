@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function() {
+        try {
+          var originalFetch = window.fetch;
+          var fetchHandler = typeof originalFetch === 'function' ? originalFetch.bind(window) : originalFetch;
+          
+          function makeFetchSettable(target) {
+            if (!target) return;
+            try {
+              Object.defineProperty(target, 'fetch', {
+                get: function() {
+                  return fetchHandler;
+                },
+                set: function(fn) {
+                  fetchHandler = fn;
+                },
+                configurable: true,
+                enumerable: true
+              });
+            } catch (e) {}
+          }
+
+          makeFetchSettable(window);
+          if (typeof Window !== 'undefined' && Window.prototype) {
+            makeFetchSettable(Window.prototype);
+          }
+          if (typeof globalThis !== 'undefined' && globalThis !== window) {
+            makeFetchSettable(globalThis);
+          }
+        } catch (err) {}
+      })();
+    </script>
+    <title>YEC — Lassonde Engineering Society</title>
+    <meta name="description" content="Official website for the York Engineering Competition (YEC) hosted by the Lassonde Engineering Society at York University." />
+    <meta property="og:title" content="YEC — Lassonde Engineering Society" />
+    <meta property="og:description" content="Official website for the York Engineering Competition (YEC) hosted by the Lassonde Engineering Society at York University." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" href="https://images.squarespace-cdn.com/content/v1/5f040b5c2da53a4ed0d94956/f67e7787-4f74-452b-8d71-f28f3df62cfc/LES+Logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-[#0f1117] text-white font-body antialiased selection:bg-[#ff9900] selection:text-black">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

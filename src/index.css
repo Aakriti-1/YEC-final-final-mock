@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Playfair Display", Georgia, serif;
+  --font-body: "Playfair Display", Georgia, serif;
+  --font-display: "Publico", "DM Serif Display", "Newsreader", "Playfair Display", Georgia, serif;
+  --font-serif: "Publico", "DM Serif Display", "Newsreader", "Playfair Display", Georgia, serif;
+}
+
+html, body {
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+.font-display {
+  font-family: "Publico", "DM Serif Display", "Newsreader", "Playfair Display", Georgia, serif;
+  letter-spacing: -0.01em;
+}
+
+.font-serif {
+  font-family: "Publico", "DM Serif Display", "Newsreader", "Playfair Display", Georgia, serif;
+}
+
+.font-body {
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+.font-sans {
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-continuous {
+  display: flex;
+  width: max-content;
+  animation: marquee 38s linear infinite;
+}
+
+.animate-marquee-continuous:hover {
+  animation-play-state: paused;
+}
+
+@keyframes yecProgressBar {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes robotJump {
+  0%, 100% {
+    transform: translateY(0) scale(1, 1);
+    animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+  8% {
+    /* Anticipation crouch right on the bottom line */
+    transform: translateY(0) scale(1.08, 0.9);
+    animation-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+  24% {
+    /* Push off the black line and launch up */
+    transform: translateY(-24px) scale(0.94, 1.08);
+    animation-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+  48% {
+    /* Peak height of the jump in air */
+    transform: translateY(-50px) scale(1, 1);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  68% {
+    /* Fast descent back to the line */
+    transform: translateY(-14px) scale(0.96, 1.05);
+    animation-timing-function: cubic-bezier(0.7, 0, 1, 1);
+  }
+  76% {
+    /* Landing impact squash on the black line */
+    transform: translateY(0) scale(1.15, 0.85);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  84% {
+    /* Small natural rebound */
+    transform: translateY(-6px) scale(0.98, 1.02);
+    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  90% {
+    /* Settle back on the black line */
+    transform: translateY(0) scale(1.03, 0.98);
+  }
+  94%, 100% {
+    /* Stand firmly on the black line */
+    transform: translateY(0) scale(1, 1);
+  }
+}
+
+@keyframes shadowPulse {
+  0%, 8%, 76%, 90%, 100% {
+    transform: translateX(-50%) scaleX(1) scaleY(1);
+    opacity: 0.55;
+  }
+  48% {
+    transform: translateX(-50%) scaleX(0.4) scaleY(0.4);
+    opacity: 0.12;
+  }
+}
+
+.animate-robot-jump {
+  transform-origin: bottom center;
+  animation: robotJump 2.4s infinite;
+}
+
+.animate-shadow-pulse {
+  transform-origin: center center;
+  animation: shadowPulse 2.4s infinite;
+}
+
