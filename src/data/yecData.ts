@@ -2,8 +2,8 @@ import { Competition, TeamMember, PackageItem } from '../types';
 
 export const HERO_ASSETS = {
   bgImage: 'https://images.squarespace-cdn.com/content/v1/5f040b5c2da53a4ed0d94956/a1e5cdd8-1585-4154-9ea6-3a8d594bfbe5/image+%281%29.png',
-  logo: 'https://images.squarespace-cdn.com/content/v1/5f040b5c2da53a4ed0d94956/0409f7c7-6a6b-45ee-8824-956962ac15f2/yec2022logo.png',
-  lesLogo: 'https://images.squarespace-cdn.com/content/v1/5f040b5c2da53a4ed0d94956/f67e7787-4f74-452b-8d71-f28f3df62cfc/LES+Logo.png',
+  logo: '/AFAE54B3-40D2-451C-89A8-5F2ED9309064-removebg-preview.png',
+  lesLogo: '/AFAE54B3-40D2-451C-89A8-5F2ED9309064-removebg-preview.png',
   robotMascot: 'https://images.squarespace-cdn.com/content/v1/5f040b5c2da53a4ed0d94956/b0b7469d-263d-441a-bdb9-140d1af4a6df/RobotVY.png',
   yecBanner: 'https://images.squarespace-cdn.com/content/v1/5f040b5c2da53a4ed0d94956/cb81a050-d5e6-4588-87ae-c0326a91edc6/YEC+Information+Package.png',
   aboutPhoto: 'https://images.squarespace-cdn.com/content/v1/5f040b5c2da53a4ed0d94956/00991a4a-52d4-4846-b6f5-7418af09634a/IMG_5828.JPG',
