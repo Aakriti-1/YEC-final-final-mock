@@ -43,7 +43,7 @@ export const TeamMemberModal: React.FC<TeamMemberModalProps> = ({
 
   if (!member) return null;
 
-  const isLead = member.category === 'Competition Lead' || member.role.toLowerCase().includes('competition lead');
+  const isLead = Boolean(member.category === 'Competition Lead' || (member.role && member.role.toLowerCase().includes('competition lead')));
   const accentColor = isLead ? '#39ae8a' : '#ff9900';
 
   return (
@@ -72,7 +72,7 @@ export const TeamMemberModal: React.FC<TeamMemberModalProps> = ({
                   : 'bg-black text-white'
               }`}
             >
-              {member.category || (isLead ? 'Competition Lead' : 'Executive Lead')}
+              {member.category || 'Team Member'}
             </span>
             {totalMembers > 0 && (
               <span className="text-xs font-mono font-bold text-zinc-800 bg-white/80 px-2 py-0.5 rounded border border-black/40">
@@ -109,9 +109,11 @@ export const TeamMemberModal: React.FC<TeamMemberModalProps> = ({
               >
                 {member.name}
               </h3>
-              <p className="font-body text-sm sm:text-base font-bold text-zinc-700 mt-0.5">
-                {member.role}
-              </p>
+              {member.role ? (
+                <p className="font-body text-sm sm:text-base font-bold text-zinc-700 mt-0.5">
+                  {member.role}
+                </p>
+              ) : null}
             </div>
           </div>
 
@@ -128,8 +130,8 @@ export const TeamMemberModal: React.FC<TeamMemberModalProps> = ({
                   Major
                 </span>
               </div>
-              <p className="font-display text-sm font-bold text-black leading-snug">
-                {member.major}
+              <p className="font-display text-sm font-bold text-black leading-snug min-h-[1.5rem]">
+                {member.major || '—'}
               </p>
             </div>
 
@@ -144,8 +146,8 @@ export const TeamMemberModal: React.FC<TeamMemberModalProps> = ({
                   Role
                 </span>
               </div>
-              <p className="font-display text-sm font-bold text-black leading-snug">
-                {member.role}
+              <p className="font-display text-sm font-bold text-black leading-snug min-h-[1.5rem]">
+                {member.role || '—'}
               </p>
             </div>
 
@@ -160,8 +162,8 @@ export const TeamMemberModal: React.FC<TeamMemberModalProps> = ({
                   Year
                 </span>
               </div>
-              <p className="font-display text-sm font-bold text-black leading-snug">
-                {member.year}
+              <p className="font-display text-sm font-bold text-black leading-snug min-h-[1.5rem]">
+                {member.year || '—'}
               </p>
             </div>
           </div>
@@ -185,8 +187,8 @@ export const TeamMemberModal: React.FC<TeamMemberModalProps> = ({
                 Interesting Fact
               </span>
             </div>
-            <p className="font-body text-zinc-900 text-sm sm:text-base leading-relaxed font-medium">
-              "{member.interestingFact}"
+            <p className="font-body text-zinc-500 text-sm sm:text-base leading-relaxed font-medium">
+              {member.interestingFact ? `"${member.interestingFact}"` : '—'}
             </p>
           </div>
         </div>

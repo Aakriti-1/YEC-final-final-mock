@@ -19,7 +19,7 @@ export interface TeamMember {
   major: string;
   year: string;
   interestingFact: string;
-  category?: 'Executive Lead' | 'Competition Lead';
+  category?: 'Executive Lead' | 'Competition Lead' | string;
 }
 
 export interface CompetitionLead {
