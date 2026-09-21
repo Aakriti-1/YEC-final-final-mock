@@ -1,6 +1,7 @@
 import React from 'react';
 import { SOCIAL_LINKS } from '../data/yecData';
 import { MessageSquare, ArrowUp, Mail, Globe, ExternalLink } from 'lucide-react';
+import { motion } from 'motion/react';
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -9,7 +10,13 @@ export const Footer: React.FC = () => {
 
   return (
     <footer id="main-footer" className="bg-[#0b0e14] text-white border-t border-white/10 pt-12 pb-10 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto space-y-10">
+      <motion.div
+        initial={{ opacity: 0, y: 25 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: '-40px' }}
+        transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
+        className="max-w-7xl mx-auto space-y-10"
+      >
         {/* Half and Half Socials (No Big Boxes) */}
         <div id="footer-socials-container" className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
           {/* LEFT HALF (50%): LASSONDE ENG SOCIALS */}
@@ -185,7 +192,8 @@ export const Footer: React.FC = () => {
             <ArrowUp className="w-3.5 h-3.5" />
           </button>
         </div>
-      </div>
+      </motion.div>
     </footer>
   );
 };
+
