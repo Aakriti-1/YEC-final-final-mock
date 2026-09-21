@@ -211,7 +211,7 @@ export const ALL_TEAM_MEMBERS: TeamMember[] = [
     category: 'Executive Committee',
     major: 'Computer Science',
     year: '3rd Year',
-    interestingFact: 'I'm the type of person to say "there's always room for dessert"',
+    interestingFact: 'I’ll always find room for dessert, no matter how full I am.',
     image: 'https://drive.google.com/open?id=1iJJN8CzxA8NObLtjbF4ERT-huQcJOwpo'
   },
   
