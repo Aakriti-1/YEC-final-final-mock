@@ -14,10 +14,7 @@ export const HERO_ASSETS = {
 export const ABOUT_PHOTOS = [
   {
     id: 'photo-1',
-    url: 'https://images.squarespace-cdn.com/content/v1/5f040b5c2da53a4ed0d94956/00991a4a-52d4-4846-b6f5-7418af09634a/IMG_5828.JPG',
-    caption: 'Design & Prototyping Lab',
-    tag: 'Lab Workspace',
-    alt: 'Students collaborating on engineering design in the lab'
+    url: 'https://i.imgur.com/sAdkQD9.jpeg',
   },
   {
     id: 'photo-2',
