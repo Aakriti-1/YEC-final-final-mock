@@ -62,13 +62,13 @@ export const TICKET_LINKS = {
 };
 
 export const COMPETITIONS: Competition[] = [
-  // WEEK 1 (OCTOBER 10 - OCTOBER 11)
+  // WEEK 1 (DATES TBD)
   {
     id: 'communication',
     name: 'Communications',
     week: 1,
     weekLabel: 'WEEK 1',
-    dates: 'OCTOBER 10TH - OCTOBER 11TH',
+    dates: 'TBD',
     image: '/competitions/communication.svg',
     description: "Participants must discuss their chosen topic's environmental, economic, technological, and societal impacts, presenting their analysis effectively. Competitors will be judged on the clarity and organization of their ideas, the depth of their analysis, and the quality and delivery of their presentation.",
     teamSize: '1 - 2 Competitors',
@@ -81,7 +81,7 @@ export const COMPETITIONS: Competition[] = [
     name: 'Debate',
     week: 1,
     weekLabel: 'WEEK 1',
-    dates: 'OCTOBER 10TH - OCTOBER 11TH',
+    dates: 'TBD',
     image: '/competitions/debate.svg',
     description: 'Akin to real-world scenarios, students develop and present nuanced arguments in favour of or against an impromptu resolution. Teams go head to head in a battle of logic and rhetoric in multiple rounds of debate.',
     teamSize: '2 Competitors per Team',
@@ -94,7 +94,7 @@ export const COMPETITIONS: Competition[] = [
     name: 'Innovative Design',
     week: 1,
     weekLabel: 'WEEK 1',
-    dates: 'OCTOBER 10TH - OCTOBER 11TH',
+    dates: 'TBD',
     image: '/competitions/innovative-design.svg',
     description: 'Participants develop a novel product or service to address an unmet need or to improve upon currently available solutions. Competitors will present their nuanced designs to a panel of experts.',
     teamSize: '2 - 4 Competitors',
@@ -103,13 +103,13 @@ export const COMPETITIONS: Competition[] = [
     details: 'Original student inventions, capstone spin-offs, patent-pending prototypes, and market-ready products assessed on engineering rigor, originality, and commercial viability.'
   },
 
-  // WEEK 2 (OCTOBER 17 - OCTOBER 18)
+  // WEEK 2 (DATES TBD)
   {
     id: 'junior-design',
     name: 'Junior Design',
     week: 2,
     weekLabel: 'WEEK 2',
-    dates: 'OCTOBER 17TH - OCTOBER 18TH',
+    dates: 'TBD',
     image: '/competitions/junior-design.svg',
     description: 'Students in their first and second years are tasked with designing creative solutions to real-world engineering problems. Competitors must design a practical solution and present it to judges making the best use of limited time and resources.',
     teamSize: '4 Competitors per Team',
@@ -122,7 +122,7 @@ export const COMPETITIONS: Competition[] = [
     name: 'Senior Design',
     week: 2,
     weekLabel: 'WEEK 2',
-    dates: 'OCTOBER 17TH - OCTOBER 18TH',
+    dates: 'TBD',
     image: '/competitions/senior-design.svg',
     description: 'Students combine multidisciplinary knowledge to design a technical solution to an advanced engineering problem. Participants must design and present a functional solution under resource constraints and adhering to competition requirements.',
     teamSize: '4 Competitors per Team',
@@ -135,7 +135,7 @@ export const COMPETITIONS: Competition[] = [
     name: 'Re-Engineering',
     week: 2,
     weekLabel: 'WEEK 2',
-    dates: 'OCTOBER 17TH - OCTOBER 18TH',
+    dates: 'TBD',
     image: '/competitions/re-engineering.svg',
     description: 'Teams utilize their diverse skill sets to redesign an existing solution to a problem with the aim of improving its overall performance.',
     teamSize: '2 - 4 Competitors',
@@ -148,7 +148,7 @@ export const COMPETITIONS: Competition[] = [
     name: 'Consulting',
     week: 2,
     weekLabel: 'WEEK 2',
-    dates: 'OCTOBER 17TH - OCTOBER 18TH',
+    dates: 'TBD',
     image: '/competitions/consulting.svg',
     description: 'Competitors will develop and present an in-depth analytical solution to a given multi-dimensional engineering challenge. Teams must demonstrate a thorough understanding of the diverse social, environmental, technological and economic impacts of their solutions.',
     teamSize: '4 Competitors per Team',

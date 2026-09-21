@@ -264,7 +264,7 @@ export const AboutAndSchedule: React.FC<AboutAndScheduleProps> = ({ onSelectComp
                 WEEK 1
               </h3>
               <span className="font-body font-bold text-sm sm:text-base tracking-widest uppercase bg-black text-white px-4 py-1.5 rounded-full">
-                OCTOBER 10TH - OCTOBER 11TH, 2026
+                DATES: TBD
               </span>
             </motion.div>
 
@@ -320,7 +320,7 @@ export const AboutAndSchedule: React.FC<AboutAndScheduleProps> = ({ onSelectComp
                 WEEK 2
               </h3>
               <span className="font-body font-bold text-sm sm:text-base tracking-widest uppercase bg-black text-white px-4 py-1.5 rounded-full">
-                OCTOBER 17TH - OCTOBER 18TH, 2026
+                DATES: TBD
               </span>
             </motion.div>
 

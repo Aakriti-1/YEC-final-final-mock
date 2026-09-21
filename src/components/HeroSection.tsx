@@ -1,13 +1,13 @@
 import React from 'react';
-import { HERO_ASSETS, TICKET_LINKS } from '../data/yecData';
+import { HERO_ASSETS } from '../data/yecData';
 import { ExternalLink, ChevronDown } from 'lucide-react';
 import { motion } from 'motion/react';
 
 interface HeroSectionProps {
-  onOpenTicketInfo: (week: number) => void;
+  onOpenTicketInfo?: (week: number) => void;
 }
 
-export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenTicketInfo }) => {
+export const HeroSection: React.FC<HeroSectionProps> = () => {
   return (
     <section
       id="page-top"
@@ -56,51 +56,29 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenTicketInfo }) =>
           <span className="text-[#e31837]">C</span><span>ompetition</span>
         </motion.h1>
 
-        {/* Ticket Action Buttons: WEEK 1 and WEEK 2 */}
+        {/* Singular Action Button: SIGN UP */}
         <motion.div
           id="hero-ticket-buttons-container"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-5 w-full max-w-md"
+          className="flex flex-col items-center justify-center w-full max-w-xs"
         >
-          <div className="flex flex-col items-center w-full sm:w-auto">
-            <a
-              id="hero-week1-ticket-btn"
-              href={TICKET_LINKS.week1}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-48 px-8 py-3.5 rounded-full bg-white text-zinc-950 font-bold font-body text-base tracking-wider hover:bg-[#ff9900] hover:text-black transition-all duration-200 transform hover:-translate-y-0.5 shadow-lg hover:shadow-[#ff9900]/20 flex items-center justify-center gap-2"
-            >
-              <span>WEEK 1</span>
-              <ExternalLink className="w-4 h-4" />
-            </a>
-            <button
-              onClick={() => onOpenTicketInfo(1)}
-              className="font-body text-[11px] text-zinc-400 hover:text-white mt-1.5 underline underline-offset-4 cursor-pointer"
-            >
-              View Week 1 Competitions
-            </button>
-          </div>
-
-          <div className="flex flex-col items-center w-full sm:w-auto">
-            <a
-              id="hero-week2-ticket-btn"
-              href={TICKET_LINKS.week2}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-48 px-8 py-3.5 rounded-full bg-white text-zinc-950 font-bold font-body text-base tracking-wider hover:bg-[#39ae8a] hover:text-white transition-all duration-200 transform hover:-translate-y-0.5 shadow-lg hover:shadow-[#39ae8a]/20 flex items-center justify-center gap-2"
-            >
-              <span>WEEK 2</span>
-              <ExternalLink className="w-4 h-4" />
-            </a>
-            <button
-              onClick={() => onOpenTicketInfo(2)}
-              className="font-body text-[11px] text-zinc-400 hover:text-white mt-1.5 underline underline-offset-4 cursor-pointer"
-            >
-              View Week 2 Competitions
-            </button>
-          </div>
+          <a
+            id="hero-signup-btn"
+            href="#signup"
+            onClick={(e) => {
+              e.preventDefault();
+            }}
+            className="w-full sm:w-64 px-10 py-4 rounded-full bg-white text-zinc-950 font-bold font-body text-lg uppercase tracking-wider hover:bg-[#ff9900] hover:text-black transition-all duration-200 transform hover:-translate-y-0.5 shadow-xl hover:shadow-[#ff9900]/25 flex items-center justify-center gap-2 cursor-pointer select-none"
+            aria-label="Sign up (Registration link coming soon)"
+          >
+            <span>SIGN UP</span>
+            <ExternalLink className="w-4 h-4 opacity-70" />
+          </a>
+          <span className="font-body text-xs text-zinc-400 tracking-wide mt-2">
+            Registration link coming soon
+          </span>
         </motion.div>
 
         {/* Subtle Scroll Down Prompt */}
