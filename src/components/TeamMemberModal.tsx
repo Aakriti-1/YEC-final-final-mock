@@ -74,11 +74,6 @@ export const TeamMemberModal: React.FC<TeamMemberModalProps> = ({
             >
               {member.category || 'Team Member'}
             </span>
-            {totalMembers > 0 && (
-              <span className="text-xs font-mono font-bold text-zinc-800 bg-white/80 px-2 py-0.5 rounded border border-black/40">
-                {currentIndex + 1} of {totalMembers}
-              </span>
-            )}
           </div>
 
           <button
