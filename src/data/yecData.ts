@@ -149,7 +149,7 @@ export const ALL_TEAM_MEMBERS: TeamMember[] = [
     major: 'Electrical Engineering',
     year: '2nd Year',
     interestingFact: 'I really love tv shows and movies, my favourite genre is romcoms.',
-    image: '/team/tohith-kajatharan.jpg'
+    image: 'https://i.imgur.com/RM4f0nC.jpeg'
   },
   {
     name: 'Adi Malek',
