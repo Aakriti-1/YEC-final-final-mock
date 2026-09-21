@@ -8,11 +8,10 @@ export const TeamCarousel: React.FC = () => {
   const [isPaused, setIsPaused] = useState(false);
   const [selectedMemberIndex, setSelectedMemberIndex] = useState<number | null>(null);
 
-  // Exactly 6 boxes as requested
-  const teamBoxes = ALL_TEAM_MEMBERS.slice(0, 6);
+  // Submitted team members
+  const teamBoxes = ALL_TEAM_MEMBERS;
 
   // Repeated 4 times to ensure an ultra-smooth, continuous infinite loop on any screen width
-  // Since keyframes shift 0% to -50%, shifting 2 full cycles of 6 items is perfectly seamless
   const marqueeItems = [...teamBoxes, ...teamBoxes, ...teamBoxes, ...teamBoxes];
 
   const handleNextMember = () => {
@@ -119,16 +118,16 @@ export const TeamCarousel: React.FC = () => {
                   aria-label={`View profile and details for ${member.name}`}
                   className="group mx-3 w-52 sm:w-60 h-56 sm:h-64 shrink-0 border-[3px] border-black bg-white/95 backdrop-blur-sm rounded-xl p-4 sm:p-5 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] flex flex-col items-center justify-center text-center transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[7px_7px_0px_0px_rgba(0,0,0,1)] cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-[#ff9900]"
                 >
-                  {/* Blank Profile Picture Frame */}
+                  {/* Profile Picture Frame */}
                   <div
-                    className="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-[3px] border-black mb-3 shrink-0 shadow-inner bg-zinc-100 flex items-center justify-center relative transition-transform duration-300 group-hover:scale-105"
+                    className="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-[3px] border-black mb-3 shrink-0 shadow-inner bg-zinc-100 flex items-center justify-center relative transition-transform duration-300 group-hover:scale-105 overflow-hidden"
                     title={member.name}
                   >
                     {member.image ? (
                       <img
                         src={member.image}
                         alt={member.name}
-                        className="w-full h-full object-cover rounded-full"
+                        className="w-full h-full object-cover"
                         referrerPolicy="no-referrer"
                       />
                     ) : (
@@ -136,11 +135,16 @@ export const TeamCarousel: React.FC = () => {
                     )}
                   </div>
 
-                  {/* Name - Fixed container so 1-line and 2-line names maintain identical box size */}
-                  <div className="w-full h-14 sm:h-16 flex items-center justify-center px-1">
-                    <h3 className="font-display text-xl sm:text-2xl uppercase tracking-wider text-black group-hover:text-[#ff9900] transition-colors leading-tight line-clamp-2">
+                  {/* Name & Role */}
+                  <div className="w-full h-14 sm:h-16 flex flex-col items-center justify-center px-1">
+                    <h3 className="font-display text-lg sm:text-xl uppercase tracking-wider text-black group-hover:text-[#ff9900] transition-colors leading-tight line-clamp-1">
                       {member.name}
                     </h3>
+                    {member.role ? (
+                      <span className="font-body text-xs font-bold text-zinc-600 tracking-wide mt-1 line-clamp-1">
+                        {member.role}
+                      </span>
+                    ) : null}
                   </div>
                 </div>
               );

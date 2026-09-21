@@ -97,9 +97,18 @@ export const TeamMemberModal: React.FC<TeamMemberModalProps> = ({
           <div className="flex items-center gap-5 p-4 rounded-xl border-2 border-black bg-zinc-50 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)]">
             <div
               className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-[3px] border-black bg-zinc-200 flex items-center justify-center shrink-0 shadow-inner relative overflow-hidden"
-              title="Team Member Avatar"
+              title={`${member.name} Avatar`}
             >
-              <User className="w-10 h-10 sm:w-12 sm:h-12 text-zinc-400 stroke-[1.5]" />
+              {member.image ? (
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-full object-cover"
+                  referrerPolicy="no-referrer"
+                />
+              ) : (
+                <User className="w-10 h-10 sm:w-12 sm:h-12 text-zinc-400 stroke-[1.5]" />
+              )}
             </div>
 
             <div className="flex-1 min-w-0">

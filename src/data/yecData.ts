@@ -158,62 +158,61 @@ export const COMPETITIONS: Competition[] = [
   }
 ];
 
-// Unified Team Members (Executive Team Leads and Competition Leads together) with blank pictures and info
+// Unified Team Members with submitted info and real photos
 export const ALL_TEAM_MEMBERS: TeamMember[] = [
-  // Executive Leads
   {
-    name: 'Naeem Baig',
-    role: '',
-    category: '',
-    major: '',
-    year: '',
-    interestingFact: '',
-    image: ''
+    name: 'Tohith Kajatharan',
+    role: 'YEC Chair',
+    category: 'Executive Committee',
+    major: 'Electrical Engineering',
+    year: '2nd Year',
+    interestingFact: 'I really love tv shows and movies, my favourite genre is romcoms.',
+    image: '/team/tohith-kajatharan.jpg'
   },
   {
-    name: 'Habiba Koraitam',
-    role: '',
-    category: '',
-    major: '',
-    year: '',
-    interestingFact: '',
-    image: ''
+    name: 'Adi Malek',
+    role: 'VC-Comms',
+    category: 'Executive Committee',
+    major: 'Space Engineering',
+    year: '2nd Year',
+    interestingFact: 'Me and Tohith have been friends for 6 years',
+    image: '/team/adi-malek.jpg'
   },
   {
-    name: 'Ishaan Das-Basak',
-    role: '',
-    category: '',
-    major: '',
-    year: '',
-    interestingFact: '',
-    image: ''
+    name: 'Kaleab Tesfaye',
+    role: 'VC-Finance',
+    category: 'Executive Committee',
+    major: 'Mechanical Engineering',
+    year: '2nd Year',
+    interestingFact: 'I wanted to become an engineer ever since I was 8',
+    image: '/team/kaleab-tesfaye.jpg'
   },
   {
-    name: 'Tehreem Asad',
-    role: '',
-    category: '',
-    major: '',
-    year: '',
-    interestingFact: '',
-    image: ''
+    name: 'Anthony Tu',
+    role: 'VC-Logs',
+    category: 'Executive Committee',
+    major: 'Computer Science',
+    year: '2nd Year',
+    interestingFact: 'Paddler on the YorkU Dragon Boat team',
+    image: '/team/anthony-tu.jpg'
   },
   {
-    name: 'Allen Abraham',
-    role: '',
-    category: '',
-    major: '',
-    year: '',
-    interestingFact: '',
-    image: ''
+    name: 'Manas Durbha',
+    role: 'VC-Finance',
+    category: 'Executive Committee',
+    major: 'Mechatronics Engineering',
+    year: '2nd Year',
+    interestingFact: 'The YEC Chair Changed my name to Vicky',
+    image: '/team/manas-durbha.jpg'
   },
   {
-    name: 'Aqeelah Ghadiyali',
-    role: '',
-    category: '',
-    major: '',
-    year: '',
-    interestingFact: '',
-    image: ''
+    name: 'Anushree Desai',
+    role: 'VC-Logs',
+    category: 'Executive Committee',
+    major: 'Space Engineering',
+    year: '2nd Year',
+    interestingFact: 'I shoot guns',
+    image: '/team/anushree-desai.jpg'
   }
 ];
 
