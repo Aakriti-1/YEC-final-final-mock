@@ -18,38 +18,23 @@ export const ABOUT_PHOTOS = [
   },
   {
     id: 'photo-2',
-    url: 'https://images.squarespace-cdn.com/content/v1/5f040b5c2da53a4ed0d94956/ba0e2607-339b-436f-86fe-dc22934b41af/20221015_151922.jpg',
-    caption: 'Hands-On Competition Build',
-    tag: 'Rapid Prototyping',
-    alt: 'Competitors testing and assembling engineering prototypes'
+    url: 'https://i.imgur.com/ZbiwTb9.jpeg',
   },
   {
     id: 'photo-3',
-    url: 'https://images.squarespace-cdn.com/content/v1/5f040b5c2da53a4ed0d94956/5978a7fa-3d18-42da-97a1-84ac9f4c596c/IMG-20221016-WA0006.jpg',
-    caption: 'Judging & Live Pitch Presentation',
-    tag: 'Final Presentations',
-    alt: 'Team presenting technical solution to industry judges'
+    url: 'https://i.imgur.com/mvrp5Go.jpeg',
   },
   {
     id: 'photo-4',
-    url: 'https://images.squarespace-cdn.com/content/v1/5f040b5c2da53a4ed0d94956/f7c2ebc6-1d11-4ce2-b969-f6f92d8d64f6/IMG_2538.JPG',
-    caption: 'Bergeron Engineering Collaboration',
-    tag: 'Team Synergy',
-    alt: 'Lassonde engineering students collaborating in the Bergeron Centre'
+    url: 'https://i.imgur.com/LaqJy5o.jpeg',
   },
   {
     id: 'photo-5',
-    url: 'https://images.squarespace-cdn.com/content/v1/5f040b5c2da53a4ed0d94956/da55fe7d-7616-4a24-956e-a4a168be6382/IMG_2573.JPG',
-    caption: 'Technical Problem Solving',
-    tag: 'Ideation & Specs',
-    alt: 'Engineering teams analyzing project specs and design constraints'
+    url: 'https://i.imgur.com/aKt5v5S.jpeg',
   },
   {
     id: 'photo-6',
-    url: 'https://images.squarespace-cdn.com/content/v1/5f040b5c2da53a4ed0d94956/439dd643-735e-4ed6-90e5-9d415f521871/IMG_2612.JPG',
-    caption: 'Final Prototype Evaluation',
-    tag: 'Hardware Testing',
-    alt: 'Participants demonstrating working hardware to the judging panel'
+    url: 'https://i.imgur.com/llkVUY1.jpeg',
   }
 ];
 
