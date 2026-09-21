@@ -43,7 +43,7 @@ export const TeamMemberModal: React.FC<TeamMemberModalProps> = ({
 
   if (!member) return null;
 
-  const isLead = Boolean(member.category === 'Competition Lead' || (member.role && member.role.toLowerCase().includes('competition lead')));
+  const isLead = Boolean(member.category === 'Competition Lead' || (member.role && (member.role.toLowerCase().includes('lead') || member.role.toLowerCase().includes('chair'))));
   const accentColor = isLead ? '#39ae8a' : '#ff9900';
 
   return (

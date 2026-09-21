@@ -152,6 +152,15 @@ export const ALL_TEAM_MEMBERS: TeamMember[] = [
     image: 'https://i.imgur.com/RM4f0nC.jpeg'
   },
   {
+    name: 'Aakriti Thakur',
+    role: 'Webmaster',
+    category: 'Executive Committee',
+    major: 'Computer Science',
+    year: '3rd Year',
+    interestingFact: 'I’m really into whimsy-maxxing and bedazzling',
+    image: '/team/aakriti-thakur.jpg'
+  },
+  {
     name: 'Adi Malek',
     role: 'VC-Comms',
     category: 'Executive Committee',

@@ -128,7 +128,7 @@ export const AboutAndSchedule: React.FC<AboutAndScheduleProps> = ({ onSelectComp
                       key={photo.id}
                       id={`yec-rotating-photo-${idx}`}
                       src={photo.url}
-                      alt={photo.alt}
+                      alt={`YEC event photo ${idx + 1}`}
                       className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-in-out ${
                         isActive
                           ? 'opacity-100 scale-100 z-10'
