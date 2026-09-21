@@ -212,7 +212,7 @@ export const ALL_TEAM_MEMBERS: TeamMember[] = [
     major: 'Computer Science',
     year: '3rd Year',
     interestingFact: 'I’ll always find room for dessert, no matter how full I am.',
-    image: 'https://drive.google.com/open?id=1iJJN8CzxA8NObLtjbF4ERT-huQcJOwpo'
+    image: 'https://i.imgur.com/F84cKcc.jpeg'
   },
   
 ];
