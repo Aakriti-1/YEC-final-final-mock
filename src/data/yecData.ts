@@ -204,7 +204,7 @@ export const ALL_TEAM_MEMBERS: TeamMember[] = [
     year: '2nd Year',
     interestingFact: 'I shoot guns',
     image: '/team/anushree-desai.jpg'
-  }
+  },
   {
     name: 'Kaushika Kolli',
     role: 'Webmaster',
