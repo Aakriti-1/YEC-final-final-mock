@@ -213,39 +213,34 @@ export const AboutAndSchedule: React.FC<AboutAndScheduleProps> = ({ onSelectComp
         </div>
 
         {/* SCHEDULE SECTION */}
-        <div id="schedule-section" className="pt-6 sm:pt-8 mb-12">
+        <div id="schedule-section" className="pt-4 sm:pt-6 mb-12">
           {/* Schedule Title Banner with Robot Mascot */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-60px' }}
             transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
-            className="relative flex flex-col md:flex-row items-center md:items-end justify-between gap-4 sm:gap-6 border-[4px] sm:border-[6px] border-black bg-[#ff9900]/15 px-5 sm:px-8 pt-4 sm:pt-5 pb-0 rounded-lg mb-8 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]"
+            className="relative flex flex-col lg:flex-row items-center justify-center gap-4 sm:gap-6 lg:gap-8 border-[4px] sm:border-[6px] border-black bg-[#ff9900]/15 px-4 sm:px-8 pt-4 sm:pt-6 pb-0 rounded-lg mb-8 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]"
           >
-            <div className="flex-1 w-full pb-3 sm:pb-4">
+            <div className="flex-1 w-full text-center flex flex-col items-center justify-center my-auto pb-4 lg:pb-5">
               <h2
                 id="schedule-main-heading"
-                className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-wide text-black leading-tight"
+                className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[6.5rem] 2xl:text-[7.25rem] uppercase tracking-tight text-black leading-none font-black text-center"
               >
-                <span className="text-[#ff9900]">Y</span> <span className="text-[#39ae8a]">E</span> <span className="text-[#e31837]">C</span> 2026 SCHEDULE
+                <span className="text-[#ff9900]">Y</span><span className="text-[#39ae8a]">E</span><span className="text-[#e31837]">C</span> 2026 SCHEDULE
               </h2>
-              <p className="font-body text-zinc-800 text-sm sm:text-base md:text-lg mt-1.5 font-medium max-w-3xl leading-snug">
+              <p className="font-body text-zinc-800 text-xs sm:text-sm md:text-base lg:text-lg mt-2 font-medium max-w-2xl leading-snug text-center mx-auto">
                 Explore all 7 competition categories across two intense weekends of engineering innovation.
               </p>
             </div>
 
-            {/* Mascot stationed and jumping directly from the bottom black line */}
-            <div className="relative shrink-0 flex flex-col items-center justify-end self-center md:self-end mt-1 md:mt-0">
-              {/* Floor Contact Shadow anchored to the bottom black line */}
-              <div
-                className="absolute bottom-0 left-1/2 -translate-x-1/2 w-20 sm:w-24 md:w-28 h-1.5 sm:h-2 bg-black/40 rounded-full blur-[1px] animate-shadow-pulse pointer-events-none"
-              />
-
+            {/* Mascot stationed and jumping directly off the bottom border */}
+            <div className="relative shrink-0 flex flex-col items-center justify-end self-center lg:self-end mt-1 lg:mt-0 leading-none">
               <img
                 id="yec-jumping-robot"
                 src={HERO_ASSETS.robotMascot}
                 alt="YEC Mascot Robot"
-                className="relative z-10 w-22 sm:w-26 md:w-30 lg:w-34 h-auto object-contain shrink-0 drop-shadow-md animate-robot-jump block"
+                className="relative z-10 w-22 sm:w-26 md:w-30 lg:w-34 h-auto object-contain shrink-0 animate-robot-jump block align-bottom"
                 referrerPolicy="no-referrer"
               />
             </div>
