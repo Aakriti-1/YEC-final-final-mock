@@ -205,6 +205,16 @@ export const ALL_TEAM_MEMBERS: TeamMember[] = [
     interestingFact: 'I shoot guns',
     image: '/team/anushree-desai.jpg'
   }
+  {
+    name: 'Kaushika Kolli',
+    role: 'Webmaster',
+    category: 'Executive Committee',
+    major: 'Computer Science',
+    year: '3rd Year',
+    interestingFact: 'I'm the type of person to say "there's always room for dessert"',
+    image: 'https://drive.google.com/open?id=1iJJN8CzxA8NObLtjbF4ERT-huQcJOwpo'
+  },
+  
 ];
 
 export const TEAM_MEMBERS = ALL_TEAM_MEMBERS;
