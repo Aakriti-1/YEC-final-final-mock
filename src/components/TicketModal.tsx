@@ -12,7 +12,7 @@ export const TicketModal: React.FC<TicketModalProps> = ({ week, onClose }) => {
 
   const comps = COMPETITIONS.filter((c) => c.week === week);
   const ticketUrl = week === 1 ? TICKET_LINKS.week1 : TICKET_LINKS.week2;
-  const dateStr = week === 1 ? 'October 10th - October 11th, 2026' : 'October 17th - October 18th, 2026';
+  const dateStr = 'Dates: TBD';
   const themeColor = week === 1 ? '#ff9900' : '#39ae8a';
 
   return (

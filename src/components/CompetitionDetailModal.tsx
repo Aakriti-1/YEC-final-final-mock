@@ -31,7 +31,7 @@ export const CompetitionDetailModal: React.FC<CompetitionDetailModalProps> = ({ 
             >
               {competition.weekLabel}
             </span>
-            <span className="text-xs font-semibold text-zinc-600">{competition.dates}</span>
+            <span className="text-xs font-semibold text-zinc-600">Dates: {competition.dates}</span>
           </div>
 
           <button
@@ -102,13 +102,15 @@ export const CompetitionDetailModal: React.FC<CompetitionDetailModalProps> = ({ 
           </button>
 
           <a
-            href={ticketLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-6 py-2.5 rounded-full bg-black text-white text-sm font-bold flex items-center gap-2 hover:bg-zinc-800 transition-colors shadow-md"
+            href="#signup"
+            onClick={(e) => {
+              e.preventDefault();
+            }}
+            className="px-6 py-2.5 rounded-full bg-black text-white text-sm font-bold flex items-center gap-2 hover:bg-zinc-800 transition-colors shadow-md cursor-pointer select-none"
+            aria-label="Sign Up (Link coming soon)"
           >
-            <span>Register via Eventbrite</span>
-            <ExternalLink className="w-4 h-4" />
+            <span>Sign Up (Coming Soon)</span>
+            <ExternalLink className="w-4 h-4 opacity-70" />
           </a>
         </div>
       </div>
