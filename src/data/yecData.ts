@@ -162,7 +162,7 @@ export const ALL_TEAM_MEMBERS: TeamMember[] = [
   },
   {
     name: 'Adi Malek',
-    role: 'VC-Comms',
+    role: 'VC-Communications',
     category: 'Executive Committee',
     major: 'Space Engineering',
     year: '2nd Year',
@@ -180,7 +180,7 @@ export const ALL_TEAM_MEMBERS: TeamMember[] = [
   },
   {
     name: 'Anthony Tu',
-    role: 'VC-Logs',
+    role: 'VC-Logistics',
     category: 'Executive Committee',
     major: 'Computer Science',
     year: '2nd Year',
@@ -198,7 +198,7 @@ export const ALL_TEAM_MEMBERS: TeamMember[] = [
   },
   {
     name: 'Anushree Desai',
-    role: 'VC-Logs',
+    role: 'VC-Logistics',
     category: 'Executive Committee',
     major: 'Space Engineering',
     year: '2nd Year',
