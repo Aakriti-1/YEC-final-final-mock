@@ -153,7 +153,7 @@ export const ALL_TEAM_MEMBERS: TeamMember[] = [
   },
   {
     name: 'Aakriti Thakur',
-    role: 'Webmaster',
+    role: 'Web Developer',
     category: 'Executive Committee',
     major: 'Computer Science',
     year: '3rd Year',
@@ -207,7 +207,7 @@ export const ALL_TEAM_MEMBERS: TeamMember[] = [
   },
   {
     name: 'Kaushika Kolli',
-    role: 'Webmaster',
+    role: 'Web Developer',
     category: 'Executive Committee',
     major: 'Computer Science',
     year: '3rd Year',
