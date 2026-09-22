@@ -8,19 +8,17 @@ import { Footer } from './components/Footer';
 import { CompetitionDetailModal } from './components/CompetitionDetailModal';
 import { TicketModal } from './components/TicketModal';
 import { PackageModal } from './components/PackageModal';
-import { CartDrawer } from './components/CartDrawer';
 import { Competition, PackageItem } from './types';
 
 export default function App() {
   const [selectedCompetition, setSelectedCompetition] = useState<Competition | null>(null);
   const [selectedTicketWeek, setSelectedTicketWeek] = useState<number | null>(null);
   const [selectedPackage, setSelectedPackage] = useState<PackageItem | null>(null);
-  const [isCartOpen, setIsCartOpen] = useState<boolean>(false);
 
   return (
     <div id="yec-app-root" className="min-h-screen bg-[#090b10] text-white flex flex-col selection:bg-[#ff9900] selection:text-black">
       {/* Navigation Header */}
-      <Header onOpenCart={() => setIsCartOpen(true)} />
+      <Header />
 
       {/* Main Content Sections */}
       <main className="flex-1">
@@ -54,11 +52,6 @@ export default function App() {
       <PackageModal
         packageItem={selectedPackage}
         onClose={() => setSelectedPackage(null)}
-      />
-
-      <CartDrawer
-        isOpen={isCartOpen}
-        onClose={() => setIsCartOpen(false)}
       />
     </div>
   );
