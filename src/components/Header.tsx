@@ -174,28 +174,6 @@ export const Header: React.FC<HeaderProps> = ({ activeTab = 'yec', onSelectTab }
             Packages
           </a>
 
-          <a
-            id="nav-join-us"
-            href="https://lasengsoc.com/directorships"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1 px-3 py-2 rounded-md hover:text-white hover:bg-white/10 transition-colors"
-          >
-            <span>Join Us!</span>
-            <ArrowUpRight className="w-3.5 h-3.5 opacity-60" />
-          </a>
-
-          <a
-            id="nav-engshop"
-            href="https://lasengsoc.com/engshop-y7m66"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1 px-3 py-2 rounded-md hover:text-white hover:bg-white/10 transition-colors"
-          >
-            <span>EngShop</span>
-            <ArrowUpRight className="w-3.5 h-3.5 opacity-60" />
-          </a>
-
           {/* More Dropdown */}
           <div
             className="relative"
@@ -204,42 +182,32 @@ export const Header: React.FC<HeaderProps> = ({ activeTab = 'yec', onSelectTab }
           >
             <button
               id="nav-more-dropdown-btn"
-              className="flex items-center gap-1 px-3 py-2 rounded-md hover:text-white hover:bg-white/10 transition-colors"
+              className="flex items-center gap-1 px-3 py-2 rounded-md hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
             >
               More
               <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${moreDropdownOpen ? 'rotate-180' : ''}`} />
             </button>
 
             {moreDropdownOpen && (
-              <div className="absolute top-full right-0 mt-1 w-52 rounded-md bg-[#161b26] border border-white/10 shadow-xl py-2 z-50">
+              <div className="absolute top-full right-0 mt-1 w-48 rounded-md bg-[#161b26] border border-white/10 shadow-xl py-2 z-50">
                 <a
-                  id="nav-more-conferences"
-                  href="https://lasengsoc.com/2025-2026"
+                  id="nav-more-join-us"
+                  href="https://lasengsoc.com/directorships"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-between px-4 py-2 text-sm text-zinc-300 hover:text-white hover:bg-white/10"
                 >
-                  <span>Conferences</span>
+                  <span>Join Us!</span>
                   <ArrowUpRight className="w-3.5 h-3.5 opacity-60" />
                 </a>
                 <a
-                  id="nav-more-handbook"
-                  href="https://lasengsoc.com/handbook"
+                  id="nav-more-engshop"
+                  href="https://lasengsoc.com/engshop-y7m66"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-between px-4 py-2 text-sm text-zinc-300 hover:text-white hover:bg-white/10"
                 >
-                  <span>Handbook</span>
-                  <ArrowUpRight className="w-3.5 h-3.5 opacity-60" />
-                </a>
-                <a
-                  id="nav-more-incident"
-                  href="https://lasengsoc.com/air"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-between px-4 py-2 text-sm text-zinc-300 hover:text-white hover:bg-white/10"
-                >
-                  <span>Incident Reporting</span>
+                  <span>EngShop</span>
                   <ArrowUpRight className="w-3.5 h-3.5 opacity-60" />
                 </a>
               </div>
@@ -335,6 +303,9 @@ export const Header: React.FC<HeaderProps> = ({ activeTab = 'yec', onSelectTab }
               Sponsorship & Packages
             </a>
             <hr className="border-white/10 my-2" />
+            <div className="px-3 py-1 text-xs font-mono font-bold uppercase tracking-wider text-zinc-500">
+              More
+            </div>
             <a
               id="mobile-nav-join"
               href="https://lasengsoc.com/directorships"

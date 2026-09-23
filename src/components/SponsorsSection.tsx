@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { SPONSORS_2026_2027 } from '../data/sponsorsData';
 import { SponsorLogo } from './SponsorLogo';
 import { SponsorModal } from './SponsorModal';
-import { Pause, Play, MapPin, Briefcase, ChevronRight, Handshake, ArrowUpRight } from 'lucide-react';
+import { MapPin, Briefcase, ChevronRight, Handshake, ArrowUpRight } from 'lucide-react';
 import { motion } from 'motion/react';
 
 export const SponsorsSection: React.FC = () => {
@@ -67,25 +67,6 @@ export const SponsorsSection: React.FC = () => {
               <span className="text-xs font-medium text-zinc-500 hidden sm:inline-block">
                 {isPaused ? 'Paused' : 'Hover card to pause'}
               </span>
-
-              <button
-                id="sponsors-marquee-toggle-btn"
-                onClick={() => setIsPaused(!isPaused)}
-                className="flex items-center gap-2 px-4 py-2 rounded-full border-2 border-black bg-white text-xs font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:bg-black hover:text-white transition-all active:translate-x-0.5 active:translate-y-0.5 cursor-pointer"
-                aria-label={isPaused ? 'Resume auto-scroll' : 'Pause auto-scroll'}
-              >
-                {isPaused ? (
-                  <>
-                    <Play className="w-3.5 h-3.5 fill-current" />
-                    <span>Resume</span>
-                  </>
-                ) : (
-                  <>
-                    <Pause className="w-3.5 h-3.5 fill-current" />
-                    <span>Pause</span>
-                  </>
-                )}
-              </button>
 
               <a
                 href="#packages-section"
