@@ -16,8 +16,6 @@ export const TeamMemberModal: React.FC<TeamMemberModalProps> = ({
   onClose,
   onNext,
   onPrev,
-  currentIndex = 0,
-  totalMembers = 0
 }) => {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
