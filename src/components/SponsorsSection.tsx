@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { SPONSORS_2026_2027 } from '../data/sponsorsData';
 import { SponsorLogo } from './SponsorLogo';
 import { SponsorModal } from './SponsorModal';
-import { Sparkles, Pause, Play, MapPin, Briefcase, ChevronRight, Handshake, ArrowUpRight } from 'lucide-react';
+import { Pause, Play, MapPin, Briefcase, ChevronRight, Handshake, ArrowUpRight } from 'lucide-react';
 import { motion } from 'motion/react';
 
 export const SponsorsSection: React.FC = () => {
@@ -185,46 +185,6 @@ export const SponsorsSection: React.FC = () => {
                       </span>
                     </div>
                   </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* Sponsor Grid Directory */}
-        <div className="max-w-7xl mx-auto mt-10 pt-8 border-t-2 border-dashed border-zinc-400">
-          <div className="flex items-center justify-between gap-4 mb-6">
-            <h3 className="text-xs font-black uppercase tracking-widest text-zinc-600 flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-[#ff9900]" />
-              <span>Sponsor Directory</span>
-            </h3>
-            <span className="text-xs font-mono text-zinc-500 font-medium">
-              Announcements Coming Soon
-            </span>
-          </div>
-
-          {/* Static Responsive Grid below marquee */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {allSponsors.map((sponsor, index) => {
-              return (
-                <div
-                  key={`grid-${sponsor.id}`}
-                  onClick={() => setSelectedSponsorIndex(index)}
-                  className="p-4 rounded-lg bg-white border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-0.5 transition-all cursor-pointer flex items-center justify-between group"
-                >
-                  <div className="flex items-center gap-3 min-w-0">
-                    <SponsorLogo logoKey={sponsor.logo} size="sm" />
-                    <div className="min-w-0">
-                      <h4 className="font-bold text-sm text-black truncate leading-tight">
-                        {sponsor.name}
-                      </h4>
-                      <p className="text-[11px] text-zinc-500 truncate flex items-center gap-1 mt-0.5">
-                        <MapPin className="w-3 h-3 text-[#ff9900] shrink-0" />
-                        <span>{sponsor.location}</span>
-                      </p>
-                    </div>
-                  </div>
-                  <ChevronRight className="w-5 h-5 text-zinc-400 group-hover:text-black group-hover:translate-x-1 transition-all shrink-0 ml-2" />
                 </div>
               );
             })}
