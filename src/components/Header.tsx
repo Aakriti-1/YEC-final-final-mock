@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { ShoppingBag, ChevronDown, Menu, X, ArrowUpRight } from 'lucide-react';
+import { ChevronDown, Menu, X, ArrowUpRight } from 'lucide-react';
 import { HERO_ASSETS } from '../data/yecData';
 
 interface HeaderProps {
-  onOpenCart: () => void;
   activeTab?: string;
   onSelectTab?: (tab: string) => void;
 }
 
-export const Header: React.FC<HeaderProps> = ({ onOpenCart, activeTab = 'yec', onSelectTab }) => {
+export const Header: React.FC<HeaderProps> = ({ activeTab = 'yec', onSelectTab }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
@@ -236,18 +235,8 @@ export const Header: React.FC<HeaderProps> = ({ onOpenCart, activeTab = 'yec', o
           </div>
         </nav>
 
-        {/* Right action: Cart button & Mobile hamburger */}
+        {/* Right action: Mobile hamburger */}
         <div className="flex items-center gap-3">
-          <button
-            id="header-cart-button"
-            onClick={onOpenCart}
-            className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/20 hover:border-white/40 hover:bg-white/10 transition-colors text-xs font-semibold tracking-wider text-white"
-            title="View Shopping Cart"
-          >
-            <ShoppingBag className="w-4 h-4" />
-            <span>0</span>
-          </button>
-
           <button
             id="mobile-menu-toggle-btn"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

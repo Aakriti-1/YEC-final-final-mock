@@ -1,7 +1,6 @@
 import React from 'react';
 import { Competition } from '../types';
-import { TICKET_LINKS } from '../data/yecData';
-import { X, Users, Calendar, ExternalLink } from 'lucide-react';
+import { X, Users, Calendar } from 'lucide-react';
 
 interface CompetitionDetailModalProps {
   competition: Competition | null;
@@ -10,8 +9,6 @@ interface CompetitionDetailModalProps {
 
 export const CompetitionDetailModal: React.FC<CompetitionDetailModalProps> = ({ competition, onClose }) => {
   if (!competition) return null;
-
-  const ticketLink = competition.week === 1 ? TICKET_LINKS.week1 : TICKET_LINKS.week2;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-fade-in">
@@ -93,25 +90,13 @@ export const CompetitionDetailModal: React.FC<CompetitionDetailModalProps> = ({ 
         </div>
 
         {/* Modal Action Footer */}
-        <div className="px-6 py-4 border-t-[3px] border-black bg-zinc-100 flex items-center justify-between gap-4">
+        <div className="px-6 py-4 border-t-[3px] border-black bg-zinc-100 flex items-center justify-end">
           <button
             onClick={onClose}
-            className="px-5 py-2.5 rounded-full border-2 border-black text-sm font-bold hover:bg-zinc-200 transition-colors cursor-pointer"
+            className="px-6 py-2.5 rounded-full bg-black text-white text-sm font-bold hover:bg-zinc-800 transition-colors shadow-md cursor-pointer"
           >
             Close
           </button>
-
-          <a
-            href="#signup"
-            onClick={(e) => {
-              e.preventDefault();
-            }}
-            className="px-6 py-2.5 rounded-full bg-black text-white text-sm font-bold flex items-center gap-2 hover:bg-zinc-800 transition-colors shadow-md cursor-pointer select-none"
-            aria-label="Sign Up (Link coming soon)"
-          >
-            <span>Sign Up (Coming Soon)</span>
-            <ExternalLink className="w-4 h-4 opacity-70" />
-          </a>
         </div>
       </div>
     </div>

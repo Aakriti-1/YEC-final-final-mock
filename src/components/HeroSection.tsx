@@ -1,6 +1,6 @@
 import React from 'react';
 import { HERO_ASSETS } from '../data/yecData';
-import { ExternalLink, ChevronDown } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 import { motion } from 'motion/react';
 
 interface HeroSectionProps {
@@ -49,44 +49,19 @@ export const HeroSection: React.FC<HeroSectionProps> = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.85, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-          className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl uppercase tracking-tight text-white leading-tight sm:leading-none mb-10 drop-shadow-md"
+          className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl uppercase tracking-tight text-white leading-tight sm:leading-none mb-6 drop-shadow-md"
         >
           <span className="text-[#ff9900]">Y</span><span>ork</span>{' '}
           <span className="text-[#39ae8a]">E</span><span>ngineering</span>{' '}
           <span className="text-[#e31837]">C</span><span>ompetition</span>
         </motion.h1>
 
-        {/* Singular Action Button: SIGN UP */}
-        <motion.div
-          id="hero-ticket-buttons-container"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="flex flex-col items-center justify-center w-full max-w-xs"
-        >
-          <a
-            id="hero-signup-btn"
-            href="#signup"
-            onClick={(e) => {
-              e.preventDefault();
-            }}
-            className="w-full sm:w-64 px-10 py-4 rounded-full bg-white text-zinc-950 font-bold font-body text-lg uppercase tracking-wider hover:bg-[#ff9900] hover:text-black transition-all duration-200 transform hover:-translate-y-0.5 shadow-xl hover:shadow-[#ff9900]/25 flex items-center justify-center gap-2 cursor-pointer select-none"
-            aria-label="Sign up (Registration link coming soon)"
-          >
-            <span>SIGN UP</span>
-            <ExternalLink className="w-4 h-4 opacity-70" />
-          </a>
-          <span className="font-body text-xs text-zinc-400 tracking-wide mt-2">
-            Registration link coming soon
-          </span>
-        </motion.div>
-
         {/* Subtle Scroll Down Prompt */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.6 }}
-          className="mt-12 flex flex-col items-center text-zinc-400"
+          transition={{ duration: 1, delay: 0.4 }}
+          className="mt-6 flex flex-col items-center text-zinc-400"
         >
           <a
             href="#about-yec"
