@@ -141,10 +141,22 @@ export const SponsorLogo: React.FC<SponsorLogoProps> = ({ logoKey, className = '
         </div>
       );
 
+    case 'TBA':
+      return (
+        <div className={`flex items-center gap-2 bg-zinc-100 text-zinc-700 font-black tracking-wider rounded border-2 border-dashed border-zinc-400 ${sizeClasses} ${className}`}>
+          <div className="w-5 h-5 rounded-full border border-dashed border-zinc-400 flex items-center justify-center text-[10px] font-mono font-bold text-zinc-500">
+            ?
+          </div>
+          <span className="text-xs sm:text-sm font-mono font-bold tracking-widest text-zinc-500">
+            TBA
+          </span>
+        </div>
+      );
+
     default:
       return (
-        <div className={`flex items-center justify-center bg-zinc-800 text-white font-black rounded border-2 border-black ${sizeClasses} ${className}`}>
-          <span>{logoKey}</span>
+        <div className={`flex items-center justify-center bg-zinc-100 text-zinc-700 font-bold rounded border-2 border-dashed border-zinc-400 ${sizeClasses} ${className}`}>
+          <span className="font-mono text-xs">{logoKey || 'TBA'}</span>
         </div>
       );
   }

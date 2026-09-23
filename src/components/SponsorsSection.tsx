@@ -16,11 +16,11 @@ export const SponsorsSection: React.FC = () => {
   // Filter sponsors if a category tab is clicked
   const filteredSponsors = activeFilter === 'all'
     ? allSponsors
-    : activeFilter === 'platinum'
+    : activeFilter === 'title'
     ? allSponsors.filter(s => s.tier.toLowerCase().includes('platinum') || s.tier.toLowerCase().includes('title'))
     : activeFilter === 'gold'
     ? allSponsors.filter(s => s.tier.toLowerCase().includes('gold') || s.tier.toLowerCase().includes('silver'))
-    : allSponsors.filter(s => s.tier.toLowerCase().includes('academic') || s.tier.toLowerCase().includes('licensure') || s.tier.toLowerCase().includes('technical'));
+    : allSponsors.filter(s => s.tier.toLowerCase().includes('bronze') || s.tier.toLowerCase().includes('partner') || s.tier.toLowerCase().includes('academic'));
 
   // Repeat for continuous infinite sliding loop
   const marqueeSponsors = [...allSponsors, ...allSponsors, ...allSponsors, ...allSponsors];
@@ -60,7 +60,7 @@ export const SponsorsSection: React.FC = () => {
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black text-white text-xs font-bold uppercase tracking-wider mb-3 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
                 <Handshake className="w-3.5 h-3.5 text-[#ff9900]" />
-                <span>Industry Allies & Academic Champions</span>
+                <span>2026/2027 Sponsorship Lineup</span>
               </div>
               <h2
                 id="sponsors-section-heading"
@@ -69,7 +69,7 @@ export const SponsorsSection: React.FC = () => {
                 Our 2026/2027 Sponsors
               </h2>
               <p className="mt-3 text-sm sm:text-base text-zinc-600 max-w-2xl font-medium">
-                Pioneering organizations powering York Engineering Competition with real-world design challenges, expert judges, student bursaries, and career mentorship. Click any sponsor for details, location, and involvement.
+                Our official 2026/2027 sponsors and industry partners will be announced soon. Partner slots are open across all tiers. Click any card below to view details, tier perks, or to connect with our executive team.
               </p>
             </div>
 
@@ -219,10 +219,10 @@ export const SponsorsSection: React.FC = () => {
             {/* Category Filter Pills */}
             <div className="flex flex-wrap gap-2">
               {[
-                { id: 'all', label: 'All Partners' },
-                { id: 'platinum', label: 'Title & Platinum' },
+                { id: 'all', label: 'All Tiers' },
+                { id: 'title', label: 'Title & Platinum' },
                 { id: 'gold', label: 'Gold & Silver' },
-                { id: 'institutions', label: 'Academic & Professional' }
+                { id: 'institutions', label: 'Bronze & Partner' }
               ].map((pill) => (
                 <button
                   key={pill.id}

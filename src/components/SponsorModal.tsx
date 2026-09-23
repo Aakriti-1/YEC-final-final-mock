@@ -132,31 +132,46 @@ export const SponsorModal: React.FC<SponsorModalProps> = ({ sponsor, onClose, on
             </div>
           </div>
 
-          {/* Official External Links */}
+          {/* Official External Links / Call to Actions */}
           <div className="flex flex-wrap items-center gap-3 pt-2">
-            <a
-              id="sponsor-website-link"
-              href={sponsor.websiteUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-black text-white text-xs font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:bg-[#ff9900] hover:text-black transition-all cursor-pointer"
-            >
-              <span>Visit Official Website</span>
-              <ExternalLink className="w-3.5 h-3.5" />
-            </a>
-
-            {sponsor.careersUrl && (
+            {sponsor.websiteUrl.startsWith('#') ? (
               <a
-                id="sponsor-careers-link"
-                href={sponsor.careersUrl}
+                id="sponsor-package-link"
+                href={sponsor.websiteUrl}
+                onClick={(e) => {
+                  e.preventDefault();
+                  onClose();
+                  const target = document.getElementById(sponsor.websiteUrl.replace('#', ''));
+                  if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-black text-white text-xs font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:bg-[#ff9900] hover:text-black transition-all cursor-pointer"
+              >
+                <span>View Sponsorship Package</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            ) : (
+              <a
+                id="sponsor-website-link"
+                href={sponsor.websiteUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border-2 border-black bg-white text-black text-xs font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:bg-zinc-100 transition-all cursor-pointer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-black text-white text-xs font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:bg-[#ff9900] hover:text-black transition-all cursor-pointer"
               >
-                <span>Careers & Co-op Portal</span>
+                <span>Visit Official Website</span>
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
             )}
+
+            <a
+              id="sponsor-contact-exec-link"
+              href="mailto:contact@lasengsoc.com?subject=YEC%202026/2027%20Sponsorship%20Inquiry"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border-2 border-black bg-white text-black text-xs font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:bg-zinc-100 transition-all cursor-pointer"
+            >
+              <span>Contact YEC Chairs</span>
+              <ExternalLink className="w-3.5 h-3.5" />
+            </a>
           </div>
         </div>
 
