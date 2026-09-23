@@ -36,3 +36,19 @@ export interface PackageItem {
   targetAudience: string;
   highlights: string[];
 }
+
+export interface Sponsor {
+  id: string;
+  name: string;
+  tier: string;
+  tierColor: string;
+  tagline: string;
+  logo: string;
+  location: string;
+  industry: string;
+  description: string;
+  supportDetails: string;
+  websiteUrl: string;
+  careersUrl?: string;
+}
+

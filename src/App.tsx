@@ -3,6 +3,7 @@ import { Header } from './components/Header';
 import { HeroSection } from './components/HeroSection';
 import { AboutAndSchedule } from './components/AboutAndSchedule';
 import { TeamCarousel } from './components/TeamCarousel';
+import { SponsorsSection } from './components/SponsorsSection';
 import { PackagesSection } from './components/PackagesSection';
 import { Footer } from './components/Footer';
 import { CompetitionDetailModal } from './components/CompetitionDetailModal';
@@ -28,10 +29,13 @@ export default function App() {
         {/* Section 2: What is YEC & 2-Week Competition Schedule */}
         <AboutAndSchedule onSelectCompetition={(comp) => setSelectedCompetition(comp)} />
 
-        {/* Section 3: Meet the Team Carousel (Combined Executive & Competition Leads in One Sliding Row) */}
+        {/* Section 3: Meet the Team Carousel */}
         <TeamCarousel />
 
-        {/* Section 4: Packages Section */}
+        {/* Section 4: Our 2026/2027 Sponsors (Rotating with interactive modals) */}
+        <SponsorsSection />
+
+        {/* Section 5: Packages Section */}
         <PackagesSection onSelectPackage={(pkg) => setSelectedPackage(pkg)} />
       </main>
 

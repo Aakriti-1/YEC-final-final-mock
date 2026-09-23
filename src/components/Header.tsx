@@ -151,6 +151,18 @@ export const Header: React.FC<HeaderProps> = ({ activeTab = 'yec', onSelectTab }
           </a>
 
           <a
+            id="nav-sponsors"
+            href="#sponsors-section"
+            onClick={(e) => {
+              e.preventDefault();
+              handleNavClick('sponsors-section');
+            }}
+            className="px-3 py-2 rounded-md hover:text-white hover:bg-white/10 transition-colors"
+          >
+            Sponsors
+          </a>
+
+          <a
             id="nav-packages"
             href="#packages-section"
             onClick={(e) => {
@@ -299,6 +311,17 @@ export const Header: React.FC<HeaderProps> = ({ activeTab = 'yec', onSelectTab }
               className="py-2 px-3 rounded-md hover:bg-white/10 text-white"
             >
               Meet the Team
+            </a>
+            <a
+              id="mobile-nav-sponsors"
+              href="#sponsors-section"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavClick('sponsors-section');
+              }}
+              className="py-2 px-3 rounded-md hover:bg-white/10 text-white"
+            >
+              2026/2027 Sponsors
             </a>
             <a
               id="mobile-nav-packages"
