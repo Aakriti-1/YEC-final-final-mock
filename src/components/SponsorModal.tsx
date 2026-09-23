@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Sponsor } from '../types';
 import { SponsorLogo } from './SponsorLogo';
-import { X, MapPin, Briefcase, ExternalLink, Award, ChevronLeft, ChevronRight, GraduationCap } from 'lucide-react';
+import { X, MapPin, Briefcase, ExternalLink, Award, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface SponsorModalProps {
   sponsor: Sponsor | null;
@@ -36,19 +36,13 @@ export const SponsorModal: React.FC<SponsorModalProps> = ({ sponsor, onClose, on
         onClick={(e) => e.stopPropagation()}
       >
         {/* Modal Top Bar */}
-        <div
-          className="px-6 py-4 flex items-center justify-between border-b-[3px] border-black"
-          style={{ backgroundColor: `${sponsor.tierColor}15` }}
-        >
+        <div className="px-6 py-4 flex items-center justify-between border-b-[3px] border-black bg-zinc-100">
           <div className="flex items-center gap-2">
-            <span
-              className="px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider text-white border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
-              style={{ backgroundColor: sponsor.tierColor }}
-            >
-              {sponsor.tier}
+            <span className="px-3 py-1 rounded-full text-xs font-black uppercase tracking-wider text-black bg-zinc-200 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+              Sponsor
             </span>
-            <span className="text-xs font-mono font-bold text-zinc-500 hidden sm:inline-block">
-              YEC 2026/2027 Partner
+            <span className="text-xs font-mono font-bold text-zinc-600">
+              YEC 2026/2027
             </span>
           </div>
 
@@ -73,9 +67,6 @@ export const SponsorModal: React.FC<SponsorModalProps> = ({ sponsor, onClose, on
               <h3 className="font-display text-2xl sm:text-3xl font-black uppercase text-black tracking-tight leading-tight">
                 {sponsor.name}
               </h3>
-              <p className="text-sm font-semibold text-zinc-600 mt-1 italic">
-                "{sponsor.tagline}"
-              </p>
             </div>
           </div>
 
@@ -116,19 +107,8 @@ export const SponsorModal: React.FC<SponsorModalProps> = ({ sponsor, onClose, on
               <Award className="w-4 h-4 text-black" />
               <span>About the Organization</span>
             </h4>
-            <div className="p-4 rounded-lg bg-zinc-50 border-2 border-black text-sm text-zinc-800 leading-relaxed font-medium">
-              {sponsor.description}
-            </div>
-          </div>
-
-          {/* YEC 2026/2027 Competition Support */}
-          <div>
-            <h4 className="flex items-center gap-2 text-xs font-black uppercase tracking-wider text-zinc-500 mb-2">
-              <GraduationCap className="w-4 h-4 text-black" />
-              <span>Support for YEC 2026/2027 Competitors</span>
-            </h4>
-            <div className="p-4 rounded-lg bg-[#fffdf0] border-2 border-black text-sm text-zinc-900 leading-relaxed font-medium border-l-[6px] border-l-[#ff9900]">
-              {sponsor.supportDetails}
+            <div className="p-4 rounded-lg bg-zinc-50 border-2 border-black text-sm text-zinc-700 font-medium">
+              To be announced
             </div>
           </div>
 

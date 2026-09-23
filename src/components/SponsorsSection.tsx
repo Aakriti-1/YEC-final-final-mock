@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { SPONSORS_2026_2027 } from '../data/sponsorsData';
-import { Sponsor } from '../types';
 import { SponsorLogo } from './SponsorLogo';
 import { SponsorModal } from './SponsorModal';
 import { Sparkles, Pause, Play, MapPin, Briefcase, ChevronRight, Handshake, ArrowUpRight } from 'lucide-react';
@@ -9,18 +8,8 @@ import { motion } from 'motion/react';
 export const SponsorsSection: React.FC = () => {
   const [isPaused, setIsPaused] = useState(false);
   const [selectedSponsorIndex, setSelectedSponsorIndex] = useState<number | null>(null);
-  const [activeFilter, setActiveFilter] = useState<string>('all');
 
   const allSponsors = SPONSORS_2026_2027;
-
-  // Filter sponsors if a category tab is clicked
-  const filteredSponsors = activeFilter === 'all'
-    ? allSponsors
-    : activeFilter === 'title'
-    ? allSponsors.filter(s => s.tier.toLowerCase().includes('platinum') || s.tier.toLowerCase().includes('title'))
-    : activeFilter === 'gold'
-    ? allSponsors.filter(s => s.tier.toLowerCase().includes('gold') || s.tier.toLowerCase().includes('silver'))
-    : allSponsors.filter(s => s.tier.toLowerCase().includes('bronze') || s.tier.toLowerCase().includes('partner') || s.tier.toLowerCase().includes('academic'));
 
   // Repeat for continuous infinite sliding loop
   const marqueeSponsors = [...allSponsors, ...allSponsors, ...allSponsors, ...allSponsors];
@@ -69,7 +58,7 @@ export const SponsorsSection: React.FC = () => {
                 Our 2026/2027 Sponsors
               </h2>
               <p className="mt-3 text-sm sm:text-base text-zinc-600 max-w-2xl font-medium">
-                Our official 2026/2027 sponsors and industry partners will be announced soon. Partner slots are open across all tiers. Click any card below to view details, tier perks, or to connect with our executive team.
+                Our official 2026/2027 sponsors and industry partners will be announced soon.
               </p>
             </div>
 
@@ -144,16 +133,10 @@ export const SponsorsSection: React.FC = () => {
                   }}
                   className="mx-3.5 w-80 sm:w-96 flex-shrink-0 bg-white rounded-xl border-[3px] border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[7px_7px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1.5 hover:-translate-x-1.5 transition-all duration-200 cursor-pointer overflow-hidden group focus:outline-none focus:ring-4 focus:ring-[#ff9900]"
                 >
-                  {/* Card Header Color Bar with Tier */}
-                  <div
-                    className="px-5 py-2.5 flex items-center justify-between border-b-2 border-black"
-                    style={{ backgroundColor: `${sponsor.tierColor}20` }}
-                  >
-                    <span
-                      className="px-2.5 py-0.5 rounded-full text-[10px] sm:text-xs font-black uppercase tracking-wider text-white border border-black shadow-[1px_1px_0px_0px_rgba(0,0,0,1)]"
-                      style={{ backgroundColor: sponsor.tierColor }}
-                    >
-                      {sponsor.tier}
+                  {/* Card Top Bar */}
+                  <div className="px-5 py-2.5 flex items-center justify-between border-b-2 border-black bg-zinc-100">
+                    <span className="px-2.5 py-0.5 rounded-full text-[10px] sm:text-xs font-black uppercase tracking-wider text-black bg-zinc-200 border border-black shadow-[1px_1px_0px_0px_rgba(0,0,0,1)]">
+                      Sponsor
                     </span>
                     <span className="text-[10px] font-mono font-bold text-zinc-500">
                       2026/2027
@@ -161,7 +144,7 @@ export const SponsorsSection: React.FC = () => {
                   </div>
 
                   {/* Card Body */}
-                  <div className="p-5 flex flex-col justify-between h-56">
+                  <div className="p-5 flex flex-col justify-between h-52">
                     <div>
                       {/* Logo Badge & Name */}
                       <div className="flex items-center gap-3 mb-3">
@@ -185,20 +168,20 @@ export const SponsorsSection: React.FC = () => {
                         </div>
                       </div>
 
-                      {/* Short quote / tagline preview */}
-                      <p className="text-xs text-zinc-600 line-clamp-2 italic font-serif">
-                        "{sponsor.tagline}"
+                      {/* Description status */}
+                      <p className="text-xs text-zinc-500 font-mono">
+                        {sponsor.description}
                       </p>
                     </div>
 
                     {/* Bottom CTA prompt */}
                     <div className="pt-3 border-t border-zinc-200 flex items-center justify-between">
                       <span className="text-[11px] font-bold text-black group-hover:text-[#ff9900] transition-colors flex items-center gap-1">
-                        <span>Click for details & location</span>
+                        <span>Click for details</span>
                         <ChevronRight className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" />
                       </span>
                       <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-zinc-100 border border-zinc-300">
-                        INFO
+                        TBA
                       </span>
                     </div>
                   </div>
@@ -208,60 +191,31 @@ export const SponsorsSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Sponsor Grid Preview with Quick Category Access */}
+        {/* Sponsor Grid Directory */}
         <div className="max-w-7xl mx-auto mt-10 pt-8 border-t-2 border-dashed border-zinc-400">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+          <div className="flex items-center justify-between gap-4 mb-6">
             <h3 className="text-xs font-black uppercase tracking-widest text-zinc-600 flex items-center gap-2">
               <Sparkles className="w-4 h-4 text-[#ff9900]" />
-              <span>Browse Sponsor Directory</span>
+              <span>Sponsor Directory</span>
             </h3>
-
-            {/* Category Filter Pills */}
-            <div className="flex flex-wrap gap-2">
-              {[
-                { id: 'all', label: 'All Tiers' },
-                { id: 'title', label: 'Title & Platinum' },
-                { id: 'gold', label: 'Gold & Silver' },
-                { id: 'institutions', label: 'Bronze & Partner' }
-              ].map((pill) => (
-                <button
-                  key={pill.id}
-                  onClick={() => setActiveFilter(pill.id)}
-                  className={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider transition-all border-2 border-black ${
-                    activeFilter === pill.id
-                      ? 'bg-black text-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]'
-                      : 'bg-white text-zinc-800 hover:bg-zinc-100'
-                  }`}
-                >
-                  {pill.label}
-                </button>
-              ))}
-            </div>
+            <span className="text-xs font-mono text-zinc-500 font-medium">
+              Announcements Coming Soon
+            </span>
           </div>
 
           {/* Static Responsive Grid below marquee */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {filteredSponsors.map((sponsor) => {
-              const originalIndex = allSponsors.findIndex((s) => s.id === sponsor.id);
+            {allSponsors.map((sponsor, index) => {
               return (
                 <div
                   key={`grid-${sponsor.id}`}
-                  onClick={() => setSelectedSponsorIndex(originalIndex >= 0 ? originalIndex : 0)}
+                  onClick={() => setSelectedSponsorIndex(index)}
                   className="p-4 rounded-lg bg-white border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-0.5 transition-all cursor-pointer flex items-center justify-between group"
                 >
                   <div className="flex items-center gap-3 min-w-0">
                     <SponsorLogo logoKey={sponsor.logo} size="sm" />
                     <div className="min-w-0">
-                      <div className="flex items-center gap-1.5">
-                        <span
-                          className="w-2 h-2 rounded-full shrink-0"
-                          style={{ backgroundColor: sponsor.tierColor }}
-                        />
-                        <span className="text-[11px] font-bold text-zinc-500 uppercase tracking-wider">
-                          {sponsor.tier}
-                        </span>
-                      </div>
-                      <h4 className="font-bold text-sm text-black truncate leading-tight mt-0.5">
+                      <h4 className="font-bold text-sm text-black truncate leading-tight">
                         {sponsor.name}
                       </h4>
                       <p className="text-[11px] text-zinc-500 truncate flex items-center gap-1 mt-0.5">

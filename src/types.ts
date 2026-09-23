@@ -40,15 +40,15 @@ export interface PackageItem {
 export interface Sponsor {
   id: string;
   name: string;
-  tier: string;
-  tierColor: string;
-  tagline: string;
   logo: string;
   location: string;
   industry: string;
   description: string;
-  supportDetails: string;
   websiteUrl: string;
+  tier?: string;
+  tierColor?: string;
+  tagline?: string;
+  supportDetails?: string;
   careersUrl?: string;
 }
 
