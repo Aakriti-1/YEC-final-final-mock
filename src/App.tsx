@@ -32,11 +32,11 @@ export default function App() {
         {/* Section 3: Meet the Team Carousel */}
         <TeamCarousel />
 
-        {/* Section 4: Packages Section */}
-        <PackagesSection onSelectPackage={(pkg) => setSelectedPackage(pkg)} />
-
-        {/* Section 5: Our 2026/2027 Sponsors (Rotating with interactive modals) */}
+        {/* Section 4: Our 2026/2027 Sponsors (Rotating with interactive modals) */}
         <SponsorsSection />
+
+        {/* Section 5: Packages Section */}
+        <PackagesSection onSelectPackage={(pkg) => setSelectedPackage(pkg)} />
       </main>
 
       {/* Section 5: Footer */}
