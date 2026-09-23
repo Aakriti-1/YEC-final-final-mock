@@ -252,7 +252,7 @@ export const PACKAGES: PackageItem[] = [
     description: 'We welcome licensed Professional Engineers (P.Eng.), academic faculty members, researchers, and distinguished alumni to evaluate presentations, prototype builds, and debate rounds.',
     targetAudience: 'Professional Engineers (P.Eng.), Faculty & Industry Experts',
     highlights: [
-      'Have a seat in the judging panel',
+      'Opportunity to participate on the official competition judging panel',
       'Evaluate creative student designs adhering to official OEC rubrics',
       'Provide direct constructive feedback & professional mentorship'
     ]
