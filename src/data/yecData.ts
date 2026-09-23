@@ -225,13 +225,12 @@ export const PACKAGES: PackageItem[] = [
     id: 'sponsorship',
     title: 'Sponsorship Package',
     pdfUrl: 'https://lasengsoc.com/s/YEC-Sponsorship-Package-2025-r3nm.pdf',
-    description: 'The York Engineering Competition (YEC) relies on industry partners and corporate sponsors to provide top-tier real-world challenge problems, student mentorship, equipment, and cash awards.',
+    description: 'The York Engineering Competition (YEC) relies on industry partners and corporate sponsors to provide top-tier real-world challenge problems, student mentorship, equipment, and rewards.',
     targetAudience: 'Industry Partners, Tech Companies, Engineering Consultancies',
     highlights: [
-      'Direct campus brand visibility to 300+ top Lassonde engineering competitors',
+      'Direct campus brand visibility to countless top Lassonde engineering competitors',
       'Exclusive recruitment resume book access & networking tables',
-      'Category naming rights and keynote judge panel seats',
-      'Prominent logo placement on website, brochures, banners & competition t-shirts'
+      'Prominent logo placement on website, posters, banners & lanyards'
     ]
   },
   {
@@ -243,7 +242,6 @@ export const PACKAGES: PackageItem[] = [
     highlights: [
       'Collaborative workshop hosting & skill-building sessions',
       'Co-branded challenge problem formulation',
-      'Club recruitment booth at the closing awards ceremony',
       'Direct engagement with motivated engineering freshmen and senior capstone students'
     ]
   },
@@ -254,7 +252,7 @@ export const PACKAGES: PackageItem[] = [
     description: 'We welcome licensed Professional Engineers (P.Eng.), academic faculty members, researchers, and distinguished alumni to evaluate presentations, prototype builds, and debate rounds.',
     targetAudience: 'Professional Engineers (P.Eng.), Faculty & Industry Experts',
     highlights: [
-      'Evaluate creative student designs adhering to official OEC rubrics',
+      'Keynote judge panel seats evaluating creative student designs adhering to official OEC rubrics',
       'Provide direct constructive feedback & professional mentorship',
       'Judge hospitality lounge with catered meals and networking with faculty',
       'Official Certificate of Appreciation from the Lassonde Engineering Society'
