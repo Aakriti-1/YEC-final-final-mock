@@ -44,26 +44,17 @@ export const TeamCarousel: React.FC = () => {
       >
         <div className="max-w-7xl mx-auto mb-10">
           {/* Section Header */}
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-            <div>
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black text-white text-xs font-bold uppercase tracking-wider mb-2">
-                <Sparkles className="w-3.5 h-3.5 text-[#ff9900]" />
-                <span>Organizing Committee & Competition Leads</span>
-              </div>
-              <h2
-                id="team-section-heading"
-                className="font-display text-5xl sm:text-6xl md:text-7xl uppercase tracking-wider text-black leading-none"
-              >
-                Meet the Team!
-              </h2>
+          <div>
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black text-white text-xs font-bold uppercase tracking-wider mb-2">
+              <Sparkles className="w-3.5 h-3.5 text-[#ff9900]" />
+              <span>Organizing Committee & Competition Leads</span>
             </div>
-
-            {/* Interactive hint */}
-            <div className="flex items-center gap-3">
-              <span className="text-xs font-medium text-zinc-500 hidden sm:inline-block">
-                {isPaused ? 'Paused' : 'Hover card to pause'}
-              </span>
-            </div>
+            <h2
+              id="team-section-heading"
+              className="font-display text-5xl sm:text-6xl md:text-7xl uppercase tracking-wider text-black leading-none"
+            >
+              Meet the Team!
+            </h2>
           </div>
         </div>
 

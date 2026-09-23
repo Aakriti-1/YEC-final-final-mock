@@ -62,12 +62,8 @@ export const SponsorsSection: React.FC = () => {
               </p>
             </div>
 
-            {/* Interactive controls */}
+            {/* Partner CTA */}
             <div className="flex flex-wrap items-center gap-3">
-              <span className="text-xs font-medium text-zinc-500 hidden sm:inline-block">
-                {isPaused ? 'Paused' : 'Hover card to pause'}
-              </span>
-
               <a
                 href="#packages-section"
                 className="hidden md:inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#ff9900] border-2 border-black text-black text-xs font-bold uppercase tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:bg-[#ffaa22] transition-all cursor-pointer"
